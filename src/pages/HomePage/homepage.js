@@ -1,6 +1,8 @@
 import "./homepage.css";
 import { BiSearch } from "react-icons/bi";
 import JobCard from "../../components/JobCard/jobcard";
+import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function HomePage() {
   return (
@@ -24,7 +26,13 @@ export default function HomePage() {
           <JobCard />
           <JobCard />
         </div>
+        <div id="home-page-2-foot">
+          <Link to="/link">
+            View more <FaArrowRight />
+          </Link>
+        </div>
       </section>
+
       <section id="home-page-3">2</section>
     </main>
   );
