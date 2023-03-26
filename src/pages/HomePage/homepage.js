@@ -15,7 +15,12 @@ export default function HomePage() {
         </form>
       </section>
 
-      <section id="home-page-2">1</section>
+      <section id="home-page-2">
+        <h4>Recently updated</h4>
+        <div id="home-page-2-cont">
+          
+        </div>
+      </section>
       <section id="home-page-3">2</section>
     </main>
   );
