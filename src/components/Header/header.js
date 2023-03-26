@@ -8,9 +8,9 @@ export default function Header() {
         <Link to="/">Jobs</Link>
 
         <span>
-          <Link>Home</Link>
-          <Link>Jobs</Link>
-          <Link>Post</Link>
+          <Link to="/">Home</Link>
+          <Link to="/jobs">Jobs</Link>
+          <Link to="/post">Post</Link>
         </span>
         <Link></Link>
       </nav>

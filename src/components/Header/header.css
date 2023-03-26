@@ -4,12 +4,12 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color: var(--one-color);
 }
 
 nav {
   width: 80%;
   height: 100%;
-  border: thin solid black;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,13 +22,17 @@ nav > a {
 
 nav > span {
   width: 40%;
-  border: thin solid black;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-a {
+nav > span > a {
+  font-size: 1.3rem;
+}
+
+nav a {
+  color: var(--two-color);
   text-decoration: none;
 }
