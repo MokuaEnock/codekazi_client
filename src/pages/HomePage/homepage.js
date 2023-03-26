@@ -1,5 +1,6 @@
 import "./homepage.css";
 import { BiSearch } from "react-icons/bi";
+import JobCard from "../../components/JobCard/jobcard";
 
 export default function HomePage() {
   return (
@@ -18,7 +19,10 @@ export default function HomePage() {
       <section id="home-page-2">
         <h4>Recently updated</h4>
         <div id="home-page-2-cont">
-          
+          <JobCard />
+          <JobCard />
+          <JobCard />
+          <JobCard />
         </div>
       </section>
       <section id="home-page-3">2</section>

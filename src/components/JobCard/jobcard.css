@@ -1,3 +1,97 @@
-.card{
-    
+.card {
+  width: 18vw;
+  height: 40vh;
+  border: thin solid lightgray;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+.card > * {
+  width: 95%;
+  /* border: thin solid black; */
+}
+
+.card-head {
+  height: 15%;
+  color: var(--one-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#job-icon {
+  font-size: 2rem;
+}
+
+.card-head > p {
+  font-size: 1.3rem;
+}
+
+.card > h4 {
+  height: 10%;
+  font-size: 1rem;
+  color: var(--one-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card > p {
+  height: 40%;
+  text-align: center;
+}
+
+.card > span {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card > span > * {
+  height: 90%;
+  width: 30%;
+  font-size: 0.7rem;
+  background-color: var(--three-color);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--one-color);
+}
+
+.card-buttons {
+  height: 12%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-buttons > button {
+  width: 40%;
+  height: 90%;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.button-save {
+  border: thin solid var(--one-color);
+  background-color: transparent;
+  color: var(--one-color);
+}
+
+.button-apply {
+  background-color: var(--one-color);
+  border: thin solid var(--one-color);
+  color: var(--two-color);
 }
