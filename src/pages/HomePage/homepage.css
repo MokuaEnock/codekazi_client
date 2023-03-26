@@ -1,0 +1,76 @@
+#home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--three-color);
+  height: max-content;
+}
+
+#home-page > * {
+  width: 80%;
+  border: thin solid black;
+  min-height: 30vh;
+  margin-top: 1vh;
+  margin-top: 1vh;
+}
+
+#home-page-1 {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#home-page-1 > h3 {
+  font-size: 1.5rem;
+  color: var(--one-color);
+  text-align: center;
+}
+#home-page-1 > p {
+  font-size: 1rem;
+  color: var(--four-color);
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+#home-page-1 > form {
+  width: 30%;
+  height: 15%;
+  border: thin solid var(--one-color);
+  color: var(--one-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#home-page-1 > form > * {
+  height: 100%;
+}
+
+#home-page-1 > form > input {
+  width: 85%;
+  border: none;
+  text-align: center;
+}
+
+#home-page-1 > form > button {
+  width: 15%;
+  border: none;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--one-color);
+}
+
+#icon {
+  width: 100%;
+  color: var(--two-color);
+}

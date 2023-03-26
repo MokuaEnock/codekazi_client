@@ -17,12 +17,17 @@
 }
 
 #root > * {
-  border: thin solid black;
   width: 100%;
 }
 
 :root {
   --one-color: #024751;
   --two-color: #23d16b;
-  --third-color: #f8fafc;
+  --three-color: #f8fafc;
+  --four-color: #808080;
+}
+
+main {
+  min-height: 85vh;
+  height: max-content;
 }
