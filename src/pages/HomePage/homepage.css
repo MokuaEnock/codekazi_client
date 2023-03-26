@@ -9,7 +9,7 @@
 
 #home-page > * {
   width: 80%;
-  border: thin solid black;
+  /* border: thin solid black; */
   min-height: 30vh;
   margin-top: 1vh;
   margin-top: 1vh;

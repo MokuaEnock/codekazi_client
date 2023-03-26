@@ -33,7 +33,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="home-page-3">2</section>
+      {/* <section id="home-page-3">2</section> */}
     </main>
   );
 }
