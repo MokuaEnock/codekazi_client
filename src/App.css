@@ -1,7 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 * {
-  font-family: "Mukta", sans-serif;
+  /* font-family: "Mukta", sans-serif; */
+  font-family: "Raleway", sans-serif;
   padding: 0;
   margin: 0;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#root > * {
+  border: thin solid black;
+  width: 100%;
+}
+
+:root {
+  --one-color: #024751;
+  --two-color: #23d16b;
+  --third-color: #f8fafc;
 }
