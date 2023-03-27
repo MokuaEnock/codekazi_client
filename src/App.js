@@ -3,6 +3,7 @@ import "./App.css";
 import Footer from "./components/Footer/footer";
 import Header from "./components/Header/header";
 import HomePage from "./pages/HomePage/homepage";
+import Jobs from "./pages/JobFormPage/jobformpage";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/jobs" element={<Jobs />} />
       </Routes>
       <Footer />
     </BrowserRouter>
