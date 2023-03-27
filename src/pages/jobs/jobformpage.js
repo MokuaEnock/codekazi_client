@@ -20,7 +20,12 @@ export default function Jobs() {
           <span>Software Engineering</span>
           <span>Software Engineering</span>
           <span>Software Engineering</span>
+          <span>Software Engineering</span>
         </div>
+      </section>
+
+      <section id="job-page-2">
+
       </section>
     </main>
   );
