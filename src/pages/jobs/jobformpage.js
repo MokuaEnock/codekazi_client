@@ -25,7 +25,10 @@ export default function Jobs() {
       </section>
 
       <section id="job-page-2">
-
+        <span>
+          <h2>Todays jobs</h2>
+          <p>Discover top paying and latest jobs</p>
+        </span>
       </section>
     </main>
   );
