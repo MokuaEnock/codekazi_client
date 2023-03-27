@@ -8,6 +8,8 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function HomePage() {
   const [latestJobs, setLatestJobs] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:3000/jobs/latest")
@@ -17,15 +19,38 @@ export default function HomePage() {
       });
   }, []);
 
-  console.log(latestJobs);
+  const handleSearchQueryChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    fetch(`http://localhost:3000/jobs?query=${searchQuery}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setSearchResults(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  console.log(searchResults);
 
   return (
     <main id="home-page">
       <section id="home-page-1">
         <h3>Welcome to jobless corner, where the idle meet.</h3>
         <p>Find jobs in any field you desire.</p>
-        <form>
-          <input type="text" placeholder="Search job title or keyword" />
+        <form onSubmit={handleSearch}>
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={handleSearchQueryChange}
+            placeholder="Search for a job"
+          />
+
           <button type="submit">
             <BiSearch id="icon" />
           </button>
