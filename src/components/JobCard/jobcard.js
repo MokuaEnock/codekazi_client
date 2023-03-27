@@ -1,26 +1,30 @@
 import "./jobcard.css";
 import { FaBuilding } from "react-icons/fa";
 
-export default function JobCard() {
+export default function JobCard({
+  description,
+  title,
+  company,
+  salary,
+  date,
+  type,
+}) {
   return (
     <div className="card">
       <div className="card-head">
         <FaBuilding id="job-icon" />
-        <p>Transtal Ltd.</p>
+        <p>{company}</p>
       </div>
-      <h4>Software Engineer</h4>
-      <p>
-        We are looking for a passionate sodtware developer who is ambitious to
-        develop scalable systems.
-      </p>
+      <h4>{title}</h4>
+      <p>{description}</p>
       <span>
-        <p>Mid Level</p>
-        <p>Mid Level</p>
-        <p>Mid Level</p>
+        <p>{salary}</p>
+        <p>{date}</p>
+        <p>{type}</p>
       </span>
       <div className="card-buttons">
-        <button className="button-apply">Apply</button>
-        <button className="button-save">Save</button>
+        <button className="button-apply">Save</button>
+        <button className="button-save">View</button>
       </div>
     </div>
   );
