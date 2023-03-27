@@ -3,7 +3,7 @@ import "./App.css";
 import Footer from "./components/Footer/footer";
 import Header from "./components/Header/header";
 import HomePage from "./pages/HomePage/homepage";
-import Jobs from "./pages/JobFormPage/jobformpage";
+import Jobs from "./pages/jobs/jobformpage";
 import Detail from "./pages/JoblDetailsPage/jobdetailspage";
 import PostPage from "./pages/JobPostPage/JobPostPage";
 import Update from "./pages/JobUpdate/update";

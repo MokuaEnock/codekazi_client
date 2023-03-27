@@ -53,9 +53,9 @@ export default function Update() {
       .catch((error) => console.error(error));
   };
 
-  const handleCancel = () => {
-    navigate(`/jobs/${id}`);
-  };
+  // const handleCancel = () => {
+  //   navigate(`/jobs/${id}`);
+  // };
 
   return (
     <main id="update-job">
