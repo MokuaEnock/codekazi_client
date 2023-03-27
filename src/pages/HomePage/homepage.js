@@ -41,9 +41,9 @@ export default function HomePage() {
               title={job.title}
               description={job.description}
               company={job.company}
-              salary={job.salary}
-              date={job.date}
-              type={job.type}
+              salary={job.education_level}
+              date={job.location}
+              type={job.employment_type}
             />
           ))}
         </div>
