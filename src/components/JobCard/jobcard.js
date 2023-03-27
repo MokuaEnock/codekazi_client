@@ -1,7 +1,9 @@
 import "./jobcard.css";
 import { FaBuilding } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function JobCard({
+  id,
   description,
   title,
   company,
@@ -23,8 +25,12 @@ export default function JobCard({
         <p>{type}</p>
       </span>
       <div className="card-buttons">
-        <button className="button-apply">Update</button>
-        <button className="button-save">View</button>
+        <Link className="button-apply" to={`/jobs/${id}/update`}>
+          Update
+        </Link>
+        <Link className="button-save" to={`/jobs/${id}`}>
+          View
+        </Link>
       </div>
     </div>
   );

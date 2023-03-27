@@ -71,7 +71,7 @@ export default function HomePage() {
           ))}
         </div>
         <div id="home-page-2-foot">
-          <Link to="/link">
+          <Link to="/jobs">
             View more <FaArrowRight />
           </Link>
         </div>
