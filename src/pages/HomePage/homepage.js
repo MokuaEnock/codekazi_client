@@ -15,7 +15,6 @@ export default function HomePage() {
     fetch("https://codekazi-production.up.railway.app/jobs/latest")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setLatestJobs(data);
       })
       .catch((error) => console.error(error));
