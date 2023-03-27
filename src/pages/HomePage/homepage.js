@@ -1,10 +1,24 @@
 import "./homepage.css";
+import React, { useState, useEffect } from "react";
+
 import { BiSearch } from "react-icons/bi";
 import JobCard from "../../components/JobCard/jobcard";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function HomePage() {
+  const [latestJobs, setLatestJobs] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/jobs/latest")
+      .then((res) => res.json())
+      .then((data) => {
+        setLatestJobs(data).catch((error) => console.error(error));
+      });
+  }, []);
+
+  console.log(latestJobs);
+
   return (
     <main id="home-page">
       <section id="home-page-1">
