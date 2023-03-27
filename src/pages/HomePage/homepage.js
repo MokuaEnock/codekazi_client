@@ -35,10 +35,17 @@ export default function HomePage() {
       <section id="home-page-2">
         <h4>Recently updated</h4>
         <div id="home-page-2-cont">
-          <JobCard />
-          <JobCard />
-          <JobCard />
-          <JobCard />
+          {latestJobs.map((job) => (
+            <JobCard
+              key={job.id}
+              title={job.title}
+              description={job.description}
+              company={job.company}
+              salary={job.salary}
+              date={job.date}
+              type={job.type}
+            />
+          ))}
         </div>
         <div id="home-page-2-foot">
           <Link to="/link">
