@@ -15,8 +15,10 @@ export default function HomePage() {
     fetch("https://codekazi-production.up.railway.app/jobs/latest")
       .then((res) => res.json())
       .then((data) => {
-        setLatestJobs(data).catch((error) => console.error(error));
-      });
+        console.log(data);
+        setLatestJobs(data);
+      })
+      .catch((error) => console.error(error));
   }, []);
 
   // const handleSearchQueryChange = (event) => {
@@ -61,6 +63,7 @@ export default function HomePage() {
           {latestJobs.map((job) => (
             <JobCard
               key={job.id}
+              id={job.id}
               title={job.title}
               description={job.description}
               company={job.company}
