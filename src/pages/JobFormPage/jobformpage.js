@@ -16,7 +16,10 @@ export default function Jobs() {
           </button>
         </form>
         <div id="categories">
-          <span></span>
+          <span>Software Engineering</span>
+          <span>Software Engineering</span>
+          <span>Software Engineering</span>
+          <span>Software Engineering</span>
         </div>
       </section>
     </main>

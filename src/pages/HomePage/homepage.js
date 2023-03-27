@@ -12,7 +12,7 @@ export default function HomePage() {
   // const [searchResults, setSearchResults] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000/jobs/latest")
+    fetch("https://codekazi-production.up.railway.app/jobs/latest")
       .then((res) => res.json())
       .then((data) => {
         setLatestJobs(data).catch((error) => console.error(error));

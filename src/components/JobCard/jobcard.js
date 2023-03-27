@@ -23,7 +23,7 @@ export default function JobCard({
         <p>{type}</p>
       </span>
       <div className="card-buttons">
-        <button className="button-apply">Save</button>
+        <button className="button-apply">Update</button>
         <button className="button-save">View</button>
       </div>
     </div>
