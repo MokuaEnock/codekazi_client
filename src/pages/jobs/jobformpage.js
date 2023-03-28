@@ -3,12 +3,14 @@ import React, { useState, useEffect } from "react";
 import { BiSearch } from "react-icons/bi";
 import Pagination from "../../components/pagination/pagination";
 import JobCard from "../../components/JobCard/jobcard";
+import ReactPaginate from "react-paginate";
 
 export default function Jobs() {
-  const [data, setData] = useState();
-  const [currentPage, setCurrentPage] = useState(1);
+  const [data, setData] = useState([]);
   const [jobsPerPage] = useState(8);
   const [isLoading, setIsLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [perPage] = useState(8);
 
   useEffect(() => {
     fetch("https://codekazi-production.up.railway.app/jobs")
@@ -24,9 +26,20 @@ export default function Jobs() {
 
   const indexOfLastJob = currentPage * jobsPerPage;
   const indexOfFirstJob = indexOfLastJob - jobsPerPage;
-  const currentJobs = data?.slice(indexOfFirstJob, indexOfLastJob);
+  const currentJobs = data?.length
+    ? data.slice(indexOfFirstJob, indexOfLastJob)
+    : [];
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  function handlePageClick({ selected: selectedPage }) {
+    setCurrentPage(selectedPage);
+  }
+
+  const offset = currentPage * perPage;
+  const currentPageData = data.length
+    ? data.slice(offset, offset + perPage)
+    : [];
 
   return (
     <main id="job-page">
@@ -74,11 +87,19 @@ export default function Jobs() {
           </section>
         )}
 
-        <Pagination
-          jobsPerPage={jobsPerPage}
-          totalJobs={data?.length}
-          paginate={paginate}
-        />
+        {/* <span className="react-aginate"> */}
+          <ReactPaginate
+            previousLabel={"Prev"}
+            nextLabel={"Next"}
+            pageCount={Math.ceil(data.length / perPage)}
+            onPageChange={handlePageClick}
+            containerClassName={"pagination"}
+            previousLinkClassName={"previous_page"}
+            nextLinkClassName={"next_page"}
+            disabledClassName={"pagination_disabled"}
+            activeClassName={"pagination_active"}
+          />
+        {/* </span> */}
       </section>
     </main>
   );
