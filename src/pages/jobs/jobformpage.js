@@ -2,6 +2,7 @@ import "./jobformpage.css";
 import React, { useState, useEffect } from "react";
 import { BiSearch } from "react-icons/bi";
 import Pagination from "../../components/pagination/pagination";
+import JobCard from "../../components/JobCard/jobcard";
 
 export default function Jobs() {
   const [data, setData] = useState();
@@ -59,10 +60,16 @@ export default function Jobs() {
         ) : (
           <section id="jobs-listing">
             {currentJobs?.map((job) => (
-              <div key={job.id}>
-                <h3>{job.title}</h3>
-                <p>{job.description}</p>
-              </div>
+              <JobCard
+                key={job.id}
+                id={job.id}
+                title={job.title}
+                description={job.description}
+                company={job.company}
+                salary={job.education_level}
+                date={job.location}
+                type={job.employment_type}
+              />
             ))}
           </section>
         )}
