@@ -6,10 +6,9 @@ export default function Jobs() {
   let [data, setData] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:3000/jobs")
+    fetch("https://codekazi-production.up.railway.app/jobs")
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
         setData(data);
       })
       .catch((error) => console.error(error));
