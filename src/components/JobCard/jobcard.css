@@ -12,7 +12,6 @@
 
 .card > * {
   width: 95%;
-  /* border: thin solid black; */
 }
 
 .card-head {
@@ -98,5 +97,5 @@
 .button-apply {
   background-color: var(--one-color);
   border: thin solid var(--one-color);
-  color: var(--two-color);
+  color: var(--three-color);
 }

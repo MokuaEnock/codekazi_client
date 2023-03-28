@@ -22,13 +22,10 @@ export default function Detail() {
       method: "DELETE",
     })
       .then((res) => {
-        // handle success
         console.log("Job deleted successfully");
-        // redirect to jobs page or do any other necessary actions
         navigate("/jobs");
       })
       .catch((error) => {
-        // handle error
         console.error(error);
       });
   }
