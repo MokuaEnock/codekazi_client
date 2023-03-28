@@ -1,4 +1,127 @@
 #job-detail {
   width: 80%;
   min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#job-detail > * {
+  width: 100%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+#job-detail-head {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#job-detail-head > * {
+  height: 100%;
+}
+
+#job-detail-head > #icon-b {
+  width: 5%;
+  font-size: 2rem;
+  color: var(--one-color);
+}
+
+#job-detail-head > span {
+  margin-left: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+#job-detail-head > span > h3 {
+  color: var(--one-color);
+  font-size: 2rem;
+}
+#job-detail-head > span > p {
+  font-size: 1rem;
+  color: var(--one-color);
+}
+
+#job-detail-head > div {
+  width: 59%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+#job-detail-head > div > button {
+  height: 50%;
+  width: 20%;
+  border: none;
+  background-color: var(--one-color);
+  color: var(--three-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#job-detail-desc {
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#job-detail-desc > h4 {
+  font-size: 1.5rem;
+  color: var(--one-color);
+  height: 5vh;
+}
+#job-detail-desc > p {
+  font-size: 1rem;
+  color: var(--one-color);
+  height: max-content;
+}
+
+#job-detail-desc1 {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#job-detail-desc1 > h4 {
+  font-size: 1.5rem;
+  color: var(--one-color);
+  height: 5vh;
+}
+
+#job-detail-desc1 > div {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#job-detail-desc1 > div > span {
+  width: max-content;
+  min-width: 15%;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  font-size: 1rem;
+  background-color: white;
+  border-radius: 4px;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: thin solid lightgrey;
+  justify-content: center;
+  color: var(--one-color);
 }

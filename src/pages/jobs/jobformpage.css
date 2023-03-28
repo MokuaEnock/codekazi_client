@@ -85,7 +85,6 @@
 }
 
 #job-page-2 {
-  border: thin solid black;
   min-height: 50vh;
   height: max-content;
   display: flex;
