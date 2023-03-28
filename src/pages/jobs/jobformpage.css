@@ -127,9 +127,14 @@ footer {
 
 .pagination {
   display: flex;
+  width: 50vw;
   justify-content: center;
   margin-top: 20px;
   border: thin solid lightgray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .previous_page,
