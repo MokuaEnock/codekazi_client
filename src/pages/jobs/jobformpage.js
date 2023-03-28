@@ -54,10 +54,10 @@ export default function Jobs() {
         </form>
         <div id="categories">
           <span>Software Engineering</span>
-          <span>Software Engineering</span>
-          <span>Software Engineering</span>
-          <span>Software Engineering</span>
-          <span>Software Engineering</span>
+          <span>Data Science</span>
+          <span>Cyber Security</span>
+          <span>Machine Learning</span>
+          <span>Web development</span>
         </div>
       </section>
 
