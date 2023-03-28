@@ -1,20 +1,31 @@
 import "./jobformpage.css";
 import React, { useState, useEffect } from "react";
 import { BiSearch } from "react-icons/bi";
+import Pagination from "../../components/pagination/pagination";
 
 export default function Jobs() {
-  let [data, setData] = useState();
+  const [data, setData] = useState();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [jobsPerPage] = useState(8);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://codekazi-production.up.railway.app/jobs")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
+        setIsLoading(false);
       })
       .catch((error) => console.error(error));
   }, []);
 
   console.log(data);
+
+  const indexOfLastJob = currentPage * jobsPerPage;
+  const indexOfFirstJob = indexOfLastJob - jobsPerPage;
+  const currentJobs = data?.slice(indexOfFirstJob, indexOfLastJob);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <main id="job-page">
@@ -43,7 +54,24 @@ export default function Jobs() {
           <p>Discover top paying and latest jobs</p>
         </span>
 
-        <section id="jobs-listing"></section>
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : (
+          <section id="jobs-listing">
+            {currentJobs?.map((job) => (
+              <div key={job.id}>
+                <h3>{job.title}</h3>
+                <p>{job.description}</p>
+              </div>
+            ))}
+          </section>
+        )}
+
+        <Pagination
+          jobsPerPage={jobsPerPage}
+          totalJobs={data?.length}
+          paginate={paginate}
+        />
       </section>
     </main>
   );
