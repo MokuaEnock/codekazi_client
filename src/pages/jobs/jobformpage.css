@@ -112,3 +112,12 @@
   font-size: 1rem;
   color: var(--four-color);
 }
+
+#jobs-listing {
+  height: max-content;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 20px;
+  column-gap: 36.5px;
+}

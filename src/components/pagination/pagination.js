@@ -11,15 +11,15 @@ export default function Pagination({ jobsParPage, totalJobs, paginate }) {
 
   return (
     <nav>
-      <ul className="pagination">
+      <div className="pagination">
         {pageNumbers.map((number) => (
-          <li key={number} className="page-item">
+          <span key={number} className="page-item">
             <button onClick={() => paginate(number)} className="page-link">
               {number}
             </button>
-          </li>
+          </span>
         ))}
-      </ul>
+      </div>
     </nav>
   );
 }
