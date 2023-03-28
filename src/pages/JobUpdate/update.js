@@ -53,124 +53,83 @@ export default function Update() {
       .catch((error) => console.error(error));
   };
 
-  // const handleCancel = () => {
-  //   navigate(`/jobs/${id}`);
-  // };
-
   return (
     <main id="update-job">
-      <div>
-        <h1>Update Job</h1>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Title:
-            <input
-              type="text"
-              value={title || job.title}
-              onChange={(event) => setTitle(event.target.value)}
-            />
-          </label>
-          <br />
-          <label>
-            Description:
-            <textarea
-              value={description || job.description}
-              onChange={(event) => setDescription(event.target.value)}
-            />
-          </label>
-          <br />
-          <label>
-            Company:
-            <input
-              type="text"
-              value={company || job.company}
-              onChange={(event) => setCompany(event.target.value)}
-            />
-          </label>
-          <br />
-          <label>
-            Location:
-            <input
-              type="text"
-              value={location || job.location}
-              onChange={(event) => setLocation(event.target.value)}
-            />
-          </label>
-          <br />
-          <label>
-            Salary Range:
-            <input
-              type="text"
-              value={salaryRange || job.salary_range}
-              onChange={(event) => setSalaryRange(event.target.value)}
-            />
-          </label>
-          <br />
-          <label>
-            Employment Type:
-            <input
-              type="text"
-              value={employmentType || job.employment_type}
-              onChange={(event) => setEmploymentType(event.target.value)}
-            />
-          </label>
-          <br />
-          <label>
-            Education Level:
-            <input
-              type="text"
-              value={educationLevel || job.education_level}
-              onChange={(event) => setEducationLevel(event.target.value)}
-            />
-          </label>
-          <br />
-          <label>
-            Years of Experience:
-            <input
-              type="text"
-              value={yearsOfExperience || job.years_of_experience}
-              onChange={(event) => setYearsOfExperience(event.target.value)}
-            />
-          </label>
-          <br />
-          {/* <label>
-            Category:
-            <select
-              value={category || job.category.name}
-              onChange={(event) => setCategory(event.target.value)}
-            >
-              <option disabled selected>
-                Select a category
-              </option>
-              <option value="1">Accounting</option>
-              <option value="2">Marketing</option>
-              <option value="3">Engineering</option>
-              <option value="4">Sales</option>
-              <option value="5">IT Support</option>
-            </select>
-          </label>
-          <br />
-          <label>
-            Active:
-            <input
-              type="checkbox"
-              checked={isActive || job.is_active}
-              onChange={(event) => setIsActive(event.target.checked)}
-            />
-          </label>
-          <br />
-          <label>
-            Expires At:
-            <input
-              type="datetime-local"
-              value={expiresAt || job.expires_at}
-              onChange={(event) => setExpiresAt(event.target.value)}
-            />
-          </label> */}
-          <br />
-          <button type="submit">Update Job</button>
-        </form>
-      </div>
+      <h3>Update Job</h3>
+      <form onSubmit={handleSubmit}>
+        <label>
+          <p>Job title</p>
+          <input
+            type="text"
+            value={title || job.title}
+            onChange={(event) => setTitle(event.target.value)}
+          />
+        </label>
+
+        <label>
+          <p>Job description</p>
+          <textarea
+            value={description || job.description}
+            onChange={(event) => setDescription(event.target.value)}
+          />
+        </label>
+
+        <label>
+          <p>Hiring company</p>
+          <input
+            type="text"
+            value={company || job.company}
+            onChange={(event) => setCompany(event.target.value)}
+          />
+        </label>
+
+        <label>
+          <p>Job location</p>
+          <input
+            type="text"
+            value={location || job.location}
+            onChange={(event) => setLocation(event.target.value)}
+          />
+        </label>
+
+        <label>
+          <p>Salary range</p>
+          <input
+            type="text"
+            value={salaryRange || job.salary_range}
+            onChange={(event) => setSalaryRange(event.target.value)}
+          />
+        </label>
+
+        <label>
+          <p>Eployment type</p>
+          <input
+            type="text"
+            value={employmentType || job.employment_type}
+            onChange={(event) => setEmploymentType(event.target.value)}
+          />
+        </label>
+
+        <label>
+          <p>Education level</p>
+          <input
+            type="text"
+            value={educationLevel || job.education_level}
+            onChange={(event) => setEducationLevel(event.target.value)}
+          />
+        </label>
+
+        <label>
+          <p>Years of experience</p>
+          <input
+            type="text"
+            value={yearsOfExperience || job.years_of_experience}
+            onChange={(event) => setYearsOfExperience(event.target.value)}
+          />
+        </label>
+
+        <button type="submit">Update Job</button>
+      </form>
     </main>
   );
 }

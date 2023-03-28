@@ -1,0 +1,72 @@
+#update-job {
+  width: 80%;
+}
+
+#update-job > * {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+#update-job > h3 {
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--one-color);
+}
+
+#update-job > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#update-job > form > button {
+  width: 20%;
+  height: 5vh;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--one-color);
+  color: var(--three-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#update-job > form > label {
+  width: 80%;
+  min-height: 10vh;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#update-job > form > label > p {
+  font-size: 1rem;
+  color: var(--one-color);
+}
+
+#update-job > form > label > input {
+  width: 50%;
+  height: 4vh;
+  color: var(--one-color);
+  border: thin solid lightgrey;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+#update-job > form > label > textarea {
+  width: 50%;
+  height: 15vh;
+  color: var(--one-color);
+  border: thin solid lightgrey;
+}

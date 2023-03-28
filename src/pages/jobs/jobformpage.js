@@ -1,7 +1,6 @@
 import "./jobformpage.css";
 import React, { useState, useEffect } from "react";
 import { BiSearch } from "react-icons/bi";
-import Pagination from "../../components/pagination/pagination";
 import JobCard from "../../components/JobCard/jobcard";
 import ReactPaginate from "react-paginate";
 
@@ -87,7 +86,6 @@ export default function Jobs() {
           </section>
         )}
 
-        {/* <span className="react-aginate"> */}
           <ReactPaginate
             previousLabel={"Prev"}
             nextLabel={"Next"}
@@ -99,7 +97,6 @@ export default function Jobs() {
             disabledClassName={"pagination_disabled"}
             activeClassName={"pagination_active"}
           />
-        {/* </span> */}
       </section>
     </main>
   );
